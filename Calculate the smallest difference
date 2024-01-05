@@ -1,0 +1,20 @@
+def smallestDifference(arrayOne, arrayTwo):
+    arrayOne.sort()
+    arrayTwo.sort()
+    min_diff = float('inf')  # Initialize min_diff to positive infinity
+    result_pair = []
+    l=len(arrayOne)
+    r=len(arrayTwo)
+    i, j = 0, 0
+
+    while i < len(arrayOne) and j < len(arrayTwo):
+        current_diff = abs(arrayOne[i] - arrayTwo[j])
+
+        if current_diff < min_diff:
+            min_diff = current_diff
+            result_pair = [arrayOne[i], arrayTwo[j]]
+        if arrayOne[i] < arrayTwo[j]:
+            i += 1
+        else:
+            j += 1
+    return result_pair
