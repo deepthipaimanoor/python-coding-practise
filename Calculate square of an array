@@ -1,0 +1,11 @@
+def sortedSquaredArray(array):
+    l = len(array)
+    if l == 0:
+        return "invalid string"
+    else:
+        for i in range(l):
+            array[i] = array[i]**2
+        return sorted(array)
+
+array=[5,6,1,23]
+print(sortedSquaredArray(array))
