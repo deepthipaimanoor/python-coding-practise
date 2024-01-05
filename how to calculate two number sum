@@ -1,0 +1,23 @@
+def twonumsum(array,target):
+  n=len(array)
+  r=n-1
+  l=0
+  array.sort()
+  result=[]
+
+  for l in range(n):
+    while l<r:
+      currentsum=array[l]+array[r]
+      if currentsum==target:
+         result.append((array[l],array[r]))
+         l=l+1
+      elif currentsum>target:
+         r-=1
+      elif currentsum<target:
+         l+=l
+    return result
+
+array=[5,6,1,23,4,546,34,8,15,14,13,12,11,10,16,13,1224,1,2,3,4,6,7,8,9]
+target=10
+result=twonumsum(array,target)
+print(result)
