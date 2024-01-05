@@ -1,0 +1,13 @@
+def nonConstructibleChange(coins):
+  l=len(coins)
+  min_change=0
+  coins.sort()
+  for i in range(l):
+    if min_change +1< coins[i]:
+      return min_change+1
+    min_change+=coins[i]
+  return min_change+1
+
+coins=[1,2,5]
+result=nonConstructibleChange(coins)
+print(result)
