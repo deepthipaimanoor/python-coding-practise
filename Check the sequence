@@ -1,0 +1,13 @@
+def check_sequence(arr, seq):
+    A = 0
+    B = 0
+    while A < len(arr) and B < len(seq):
+        if arr[A] == seq[B]:
+            B += 1
+        A += 1
+    return B == len(seq)
+
+arr = [1,2,3,4,5,6,7,8]
+seq = [3,6,8]
+
+print(check_sequence(arr, seq))
