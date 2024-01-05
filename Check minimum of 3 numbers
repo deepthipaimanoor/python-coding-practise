@@ -1,0 +1,10 @@
+import numpy as np
+n_ok =0
+n_simulations=100
+for k in range (n_simulations):
+  x = np.random.randint(low=1,high=20)
+  y = np.random.randint(low=1,high=20)
+  z = np.random.randint(low=1,high=20)
+  if min(x,y,z)>=15:
+   n_ok += 1
+print(n_ok/n_simulations)
